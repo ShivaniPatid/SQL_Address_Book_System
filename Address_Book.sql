@@ -58,3 +58,16 @@ SELECT COUNT(State) FROM Address_Book;
 SELECT * FROM Address_Book
 ORDER BY City, FirstName;
 
+-------- UC 9 ---------
+
+ALTER TABLE Address_Book ADD Type varchar(15)
+
+-------- UC 10 ---------
+
+SELECT COUNT(Type) FROM Address_Book;
+
+-------- UC 11 --------
+
+INSERT INTO Address_Book(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email,Type)
+VALUES	('Roanak','Sharma','Street 17','Mumbai',' Maharastra','426661','8596452536','Roanak@gmail.com','Friend'),
+		('Sakshi','Chouhan','Street 12','Pune','Maharastra','425601','8856964525','Sakshi@gmail.com','Family')
