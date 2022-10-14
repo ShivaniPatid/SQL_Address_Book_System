@@ -49,9 +49,9 @@ WHERE City = 'Mumbai' AND State = 'Maharastra';
 
 ----------UC 7 : understand the size of address book by City and State---------
 
-SELECT COUNT(City) FROM Address_Book;
+SELECT City, COUNT(City) FROM Address_Book Group by City
 
-SELECT COUNT(State) FROM Address_Book;
+SELECT State, COUNT(State) FROM Address_Book Group by State;
 
 ---------UC 8 : retrieve entries sorted alphabetically by Person’s name for a given city-----------
 
@@ -64,7 +64,7 @@ ALTER TABLE Address_Book ADD Type varchar(15)
 
 -------- UC 10 ---------
 
-SELECT COUNT(Type) FROM Address_Book;
+SELECT Type, COUNT(Type) FROM Address_Book GROUP BY Type
 
 -------- UC 11 --------
 
